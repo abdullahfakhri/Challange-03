@@ -1,0 +1,41 @@
+.container-login{
+    flex-direction: row;
+    flex: content;
+}
+
+.field-login{
+    display: flex;
+    height: 100vh;
+
+}
+.box-1{
+    width: 100px;
+    height: 34px;
+    background: #CFD4ED;
+    margin-top: 15px;
+}
+.h1-login{
+    padding-top: 50px;
+}
+.gambar-1{
+    background-image: url(../../Assets/img/image1.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: inherit;
+}
+.login{
+    width: 50%;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 250px;
+}
+.form{
+    margin-top: 50px;
+}
+
+.button-1{
+    background-color: #0D28A6;
+    margin-top: 25px;
+}
