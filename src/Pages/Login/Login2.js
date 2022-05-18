@@ -1,27 +1,12 @@
-// import { Button } from "bootstrap";
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import "../Login/Login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form } from "react-bootstrap";
-import GoogleButton from "react-google-button";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../Firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 
-export const Login = () => {
-
-  
-  // function klikButton(){
-  //   const click = () => {
-  //     return useNavigate ("/Dashboard");
-  //   }
-  // }
-  let navigate = useNavigate();
-  function handleClick() {
-    navigate('/login')
-  }
+export const Login2 = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -35,22 +20,12 @@ export const Login = () => {
       const value = e.target.value
       setPassword(value)
     }
-    
 
-  const authDefault = auth
-  const provider = new GoogleAuthProvider();
-
-
-  const handleGoogle = ()=>{
-    signInWithPopup(authDefault, provider).then((data)=>{
-      console.log(data)
-
-
-    }).catch((err)=>{
-      console.log(err, "ini bukan err")
-    })
+    let navigate = useNavigate();
+    function handleClick() {
+    navigate('/Dashboard')
   }
-  
+
   return (
     <div className="container-login">
       <div className="field-login">
@@ -61,7 +36,7 @@ export const Login = () => {
               <div className="box-1"></div>
             </div>
             <div>
-              <h1 className="h1-login">Create new Account</h1>
+              <h1 className="h1-login">Welcome Admin BCR</h1>
             </div>
             <div className="form">
             <Form>
@@ -76,20 +51,17 @@ export const Login = () => {
               </Form.Group>
               <div className="d-grid gap-2">
                 <Button className="button-1" variant="primary" size="lg" onClick={handleClick}>
-                  Sign Up
+                  Login
                 </Button>
               </div>
-              <div className="googleButton">
-                <GoogleButton onClick={handleGoogle} type="dark" />
-              </div>
-              <div className="link">
-                <a href=".">Already have an account? Login</a>
-              </div>
+              {/* <div className="link">
+                <a href=".">Already have an account</a>
+              </div> */}
             </Form>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
